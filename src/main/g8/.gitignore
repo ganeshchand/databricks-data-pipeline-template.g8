@@ -1,0 +1,7 @@
+.vscode
+.idea
+.metals
+.bloop
+target/
+lib_managed/
+src_managed/
