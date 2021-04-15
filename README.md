@@ -26,19 +26,26 @@ This template project is intended for data engineers developing data pipelines u
 ## Getting started
 
 ### Using template
-
 1. [Install SBT](installSBT) in case you don't have it installed on your local machine
 2. create a project using the template `$ sbt new ganeshchand/databricks-data-pipeline-template.g8`
-Note: you will be prompted to fill-in the values required for the template. You can provide and/or accept the defaults
-   Alternatively, you can simply provide the parameters you wish to customize as shown below: 
-```$ sbt new ganeshchand/databricks-data-pipeline-template.g8 --name=ganesh --organization=com.databricks```
+   Note: you will be prompted to fill-in the values required for the template. You can provide and/or accept the defaults
+   Alternatively, you can simply provide the parameters you wish to customize as shown below:
+   ```$ sbt new ganeshchand/databricks-data-pipeline-template.g8 --name=ganesh --organization=com.databricks```
 
 3. `$ cd <YOUR_PROJECT_NAME>`
 4. Run test `$ sbt test`. The first test will take about a minute or less depending on your internet speed because it will download the project dependencies jars from maven
+   ![](doc/images/create_template.png)
 5. Open your project in IDE:
-    * VS CODE: `$ code .`
     * IntelliJ: `$ idea .`
-6. If you are a Databricks customer, you can deploy your jar to Databricks by following instructions [here](https://docs.databricks.com/jobs.html#create-a-job)  
+     * VS CODE: `$ code .`
+      ![](doc/images/vs_code.png)
+6. If you are a Databricks customer, you can deploy your jar to Databricks by following instructions [here](https://docs.databricks.com/jobs.html#create-a-job)
+
+
+
+
+
+
 ### Contributing to this template
 1. Fork this repo and clone it on your local machine
 2. Make changes to the template and make sure to clean the previous build `sbt clean compile`

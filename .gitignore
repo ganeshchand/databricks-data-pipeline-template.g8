@@ -6,3 +6,4 @@ target/
 lib_managed/
 src_managed/
 .bsp
+.DS_Store
