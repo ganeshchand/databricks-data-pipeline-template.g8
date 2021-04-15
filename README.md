@@ -31,7 +31,7 @@ This template project is intended for data engineers developing data pipelines u
 2. create a project using the template `$ sbt new ganeshchand/databricks-data-pipeline-template.g8`
 Note: you will be prompted to fill-in the values required for the template. You can provide and/or accept the defaults
    Alternatively, you can simply provide the parameters you wish to customize as shown below: 
-```sbt new file://databricks-data-pipeline-template.g8 --name=ganesh --organization=com.databricks```
+```$ sbt new ganeshchand/databricks-data-pipeline-template.g8 --name=ganesh --organization=com.databricks```
 
 3. `$ cd <YOUR_PROJECT_NAME>`
 4. Run test `$ sbt test`. The first test will take about a minute or less depending on your internet speed because it will download the project dependencies jars from maven
