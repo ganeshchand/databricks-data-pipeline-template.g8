@@ -1,4 +1,4 @@
-# databricks-data-pipeline-template.g8
+# databricks-data-pipeline-template.g8 for Scala 2.13
 
 ## A [Databricks][databricks] Data Pipeline project template using [Giter8][g8]
 
@@ -18,7 +18,8 @@ This template project is intended for data engineers developing data pipelines u
 
     * `spark-sql` for developing your ETL pipeline
     * `delta-core` for creating Delta Table
-    * `dbutils-api` for accessing [Databricks Utilities](https://docs.databricks.com/dev-tools/databricks-utils.html#databricks-utilities)
+  <strike>`dbutils-api` for accessing [Databricks Utilities](https://docs.databricks.com/dev-tools/databricks-utils.html#databricks-utilities)
+  </strike>   Not yet availaable for Scala 2.13
     * `scalatest` for unit test
 
 * It also provides `sbt-assembly` sbt plugin in case you need to build an uber jar.
@@ -27,21 +28,25 @@ This template project is intended for data engineers developing data pipelines u
 
 ### Using template
 1. [Install SBT](installSBT) in case you don't have it installed on your local machine
-2. create a project using the template `$ sbt new ganeshchand/databricks-data-pipeline-template.g8`
+2. create a project using the template 
+```
+$ sbt new ganeshchand/databricks-data-pipeline-template.g8 -b scala213
+```
    Note: you will be prompted to fill-in the values required for the template. You can provide and/or accept the defaults
    Alternatively, you can simply provide the parameters you wish to customize as shown below:
-   ```$ sbt new ganeshchand/databricks-data-pipeline-template.g8 --name=ganesh --organization=com.databricks```
+   
+```
+$ sbt new ganeshchand/databricks-data-pipeline-template.g8 -b scala213 --name=ganesh --organization=com.databricks
+```
 
-3. `$ cd <YOUR_PROJECT_NAME>`
-4. Run test `$ sbt test`. The first test will take about a minute or less depending on your internet speed because it will download the project dependencies jars from maven
+4. `$ cd <YOUR_PROJECT_NAME>`
+5. Run test `$ sbt test`. The first test will take about a minute or less depending on your internet speed because it will download the project dependencies jars from maven
    ![](doc/images/create_template.png)
-5. Open your project in IDE:
+6. Open your project in IDE:
     * IntelliJ: `$ idea .`
      * VS CODE: `$ code .`
       ![](doc/images/vs_code.png)
-6. If you are a Databricks customer, you can deploy your jar to Databricks by following instructions [here](https://docs.databricks.com/jobs.html#create-a-job)
-
-
+7. If you are a Databricks customer, you can deploy your jar to Databricks by following instructions [here](https://docs.databricks.com/jobs.html#create-a-job)
 
 
 

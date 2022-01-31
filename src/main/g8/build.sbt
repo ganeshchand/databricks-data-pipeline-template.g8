@@ -16,7 +16,7 @@ lazy val root = (project in file("."))
 
     libraryDependencies ++= Seq(
       "com.typesafe" % "config" % "$typesafeConfigVersion$" % "provided",
-      "com.databricks" %% "dbutils-api" % "$dbutilsApiVersion$" % "provided",
+//      "com.databricks" %% "dbutils-api" % "$dbutilsApiVersion$" % "provided",
       "io.delta" %% "delta-core" % "$deltaVersion$" % "provided",
       "org.apache.spark" %% "spark-sql" % "$sparkVersion$" % "provided",
       "org.scalatest" %% "scalatest" % "$scalatestVersion$" % "test",
