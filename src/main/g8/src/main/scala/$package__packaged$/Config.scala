@@ -1,4 +1,4 @@
-package $organization$.$name;format="word"$
+package $organization$.$name;format="lower,word"$
 
 import com.typesafe.config.ConfigFactory
 

@@ -1,4 +1,4 @@
-package $organization$.$name;format="word"$
+package $organization$.$name;format="lower,word"$
 
 import org.apache.spark.sql.SparkSession
 
