@@ -45,8 +45,12 @@ $ sbt new ganeshchand/databricks-data-pipeline-template.g8
     * IntelliJ: `$ idea .`
      * VS CODE: `$ code .`
       ![](doc/images/vs_code.png)
-6. If you are a Databricks customer, you can deploy your jar to Databricks by following instructions [here](https://docs.databricks.com/jobs.html#create-a-job)
-Below is an JSON example of Data
+6. If you are a Databricks customer, you can create a Workflow using the jar. Following the instructions [here](https://docs.databricks.com/jobs.html#create-a-job)
+   To create a jar, run the following command:
+   ```bash
+    $ sbt package 
+    ```
+For reference, below is a JSON representation of a Databricks Workflow with a Jar task
 ```json
 {
   "name": "scala-sbt-template-test",
@@ -95,3 +99,8 @@ $ sbt new ganeshchand/databricks-data-pipeline-template.g8 -b scala213
   * `cd template-test`
   * `sbt test`
 4. Send the pull request
+
+Note: If you need to use the absolute local path, you'll need to use `file://<absolute_path>`
+```bash
+$ sbt new file:///temp/databricks-data-pipeline-template.g8 --name=test --organization=com.example
+```
