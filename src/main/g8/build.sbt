@@ -1,18 +1,14 @@
+ThisBuild / scalaVersion     := "$scalaVersion$"
+ThisBuild / version          := "$version$"
+ThisBuild / organization     := "$organization$"
+
 lazy val root = (project in file("."))
 .settings(
-    inThisBuild(List(
-      organization := "$organization$",
-      scalaVersion := "$scalaVersion$"
-    )),
-    name := "$name$",
-    version := "$version$",
-
-    javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
-    javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled"),
-    scalacOptions ++= Seq("-deprecation", "-unchecked"),
-    
-    parallelExecution in Test := false,
-    fork := true,
+    Compile / javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
+    Compile / scalacOptions ++= Seq("-deprecation", "-unchecked"),
+    Test / javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled"),
+    // Test / parallelExecution := false,
+    Test / fork := true,
 
     libraryDependencies ++= Seq(
       "com.typesafe" % "config" % "$typesafeConfigVersion$" % "provided",
@@ -20,5 +16,6 @@ lazy val root = (project in file("."))
       "io.delta" %% "delta-core" % "$deltaVersion$" % "provided",
       "org.apache.spark" %% "spark-sql" % "$sparkVersion$" % "provided",
       "org.scalatest" %% "scalatest" % "$scalatestVersion$" % "test",
+      "com.outr" %% "scribe" % "$scribeVersion$"
     ),
   )
