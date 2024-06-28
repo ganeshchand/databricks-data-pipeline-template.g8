@@ -48,7 +48,7 @@ $ sbt new ganeshchand/databricks-data-pipeline-template.g8
 6. If you are a Databricks customer, you can create a Workflow using the jar. Following the instructions [here](https://docs.databricks.com/jobs.html#create-a-job)
    To create a jar, run the following command:
    ```bash
-    $ sbt package 
+    $ sbt assembly 
     ```
 For reference, below is a JSON representation of a Databricks Workflow with a Jar task
 ```json
@@ -65,7 +65,7 @@ For reference, below is a JSON representation of a Databricks Workflow with a Ja
       "job_cluster_key": "job_cluster",
       "libraries": [
         {
-          "jar": "dbfs:/gc/jars/root_2.12-0.0.1.jar"
+          "jar": "dbfs:/gc/jars/example-assembly-0.0.1.jar"
         }
       ],
   ],
