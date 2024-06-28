@@ -4,10 +4,10 @@ ThisBuild / organization     := "$organization$"
 
 lazy val root = (project in file("."))
 .settings(
+    name := "$name$",
     Compile / javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
     Compile / scalacOptions ++= Seq("-deprecation", "-unchecked"),
     Test / javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled"),
-    // Test / parallelExecution := false,
     Test / fork := true,
 
     libraryDependencies ++= Seq(
